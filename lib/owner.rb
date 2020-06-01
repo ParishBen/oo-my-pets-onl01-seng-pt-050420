@@ -38,14 +38,14 @@ class Owner
   end
    
    def walk_dogs
-     self.dogs.collect {|dog| dog.mood = "happy"}
+     self.dogs.each {|dog| dog.mood = "happy"}
    end
    def feed_cats
-     self.cats.collect {|cat| cat.mood = "happy"}
+     self.cats.each {|cat| cat.mood = "happy"}
  end
  def sell_pets
-   @dogsowned.collect {|dog| dog.owner.clear}
-   @catsowned.collect {|cat| cat.owner.clear}
+   @dogsowned.each {|dog| dog.owner.clear}
+   @catsowned.each| cat.owner.clear}
  end
  def list_pets
    "I have #{dogsowned.count} dog(s), and #{catsowned.count} cat(s)."
