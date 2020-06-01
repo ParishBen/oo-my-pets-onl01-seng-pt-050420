@@ -26,13 +26,14 @@ class Owner
    Dog.all.collect {|doggy| doggy.owner == self}
  end
  def buy_cat(name)
-   name = Cat.new 
+   name = Cat.new (name)
    name.owner = self
  end
  def buy_dog(name)
-   name= Dog.new
+   name= Dog.new(name)
    name.owner = self
  end
    def walk_dogs
+     self.dogs.collect
      
 end
