@@ -33,5 +33,5 @@ class Owner
    name= Dog.new
    name.owner = self
  end
-   
+   def walk_dogs
 end
