@@ -30,12 +30,12 @@ class Owner
  def buy_cat(name)
  name =  Cat.new(name)
  name.owner = self
- @@catsowned << name
+ @catsowned << name
  end
  def buy_dog(name)
   name= Dog.new(name)
   name.owner = self
-  @@dogsowned << name
+  @dogsowned << name
  end
    def walk_dogs
      self.dogs.collect {|dog| dog.mood = "happy"}
@@ -44,8 +44,8 @@ class Owner
      self.cats.collect {|cat| cat.mood = "happy"}
  end
  def sell_pets
-   @@dogsowned.owner.clear
-   @@catsowned.owner.clear
+   @dogsowned.owner.clear
+   @catsowned.owner.clear
  end
  def list_pets
    "I have #{dogsowned.count} dog(s), and #{catsowned.count} cat(s)."
