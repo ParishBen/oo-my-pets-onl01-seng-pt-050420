@@ -31,10 +31,12 @@ class Owner
 
   def buy_cat(name)
     Cat.new(name, self)
+    @catsowned << name
   end
 
   def buy_dog(name)
     Dog.new(name, self)
+    @dogsowned << name
   end
    
    def walk_dogs
@@ -48,9 +50,9 @@ class Owner
    @catsowned.each {|cat| cat.owner = nil}
  end
  def sell_pets
-    pets = self.dogs + self.cats
+    pets = @catsowned + @dogsowned
     pets.each do |pet|
-     pet.mood = "nervous"
+     pet.mood = "nervous";
     pet.owner = nil
     end
   end
