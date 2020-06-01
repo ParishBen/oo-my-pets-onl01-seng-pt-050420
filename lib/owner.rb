@@ -11,6 +11,6 @@ class Owner
      "I am a #{@species}."
   end
   def self.all
-  @@all.size
+  @@all
  end
 end
