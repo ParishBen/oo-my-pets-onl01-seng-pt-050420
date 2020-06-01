@@ -21,12 +21,14 @@ class Owner
  def self.reset_all
    @@all.clear
  end
- def cats 
-   Cat.all.collect {|kitty| kitty.owner == self}
- end
- def dogs
-   Dog.all.collect {|doggy| doggy.owner == self}
- end
+ def cats
+    Cat.all.select{|cat| cat.owner == self}
+  end
+
+  def dogs
+    Dog.all.select{|dog| dog.owner == self}
+  end
+
  def buy_cat(name)
  name =  Cat.new(name,owner)
  name.owner = self
