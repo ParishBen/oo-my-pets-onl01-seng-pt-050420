@@ -45,7 +45,7 @@ class Owner
  end
  def sell_pets
    @dogsowned.each {|dog| dog.owner.clear}
-   @catsowned.each| cat.owner.clear}
+   @catsowned.each {|cat| cat.owner.clear}
  end
  def list_pets
    "I have #{dogsowned.count} dog(s), and #{catsowned.count} cat(s)."
