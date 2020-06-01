@@ -1,7 +1,8 @@
 class Owner
   attr_reader :name, :species
   @@all= []
-  @@pets = []
+  @dogsowned = []
+  @catsowned = []
   def initialize(name)
     @name = name
     @species = "human"
@@ -29,12 +30,12 @@ class Owner
  def buy_cat(name)
  name =  Cat.new(name, self)
  name.owner = self
- @@pets << name
+ @@catsowned << name
  end
  def buy_dog(name)
   name= Dog.new(name, self)
   name.owner = self
-  @@pets << name
+  @@dogsowned << name
  end
    def walk_dogs
      self.dogs.collect {|dog| dog.mood = "happy"}
@@ -43,6 +44,8 @@ class Owner
      self.cats.collect {|cat| cat.mood = "happy"}
  end
  def sell_pets
-   @@pets.clear
+   @@dogs.owner.clear
+   @@cats.owner.clear
  end
+ 
 end
