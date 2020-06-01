@@ -44,8 +44,8 @@ class Owner
      self.cats.collect {|cat| cat.mood = "happy"}
  end
  def sell_pets
-   @@dogs.owner.clear
-   @@cats.owner.clear
+   @@dogsowned.owner.clear
+   @@catsowned.owner.clear
  end
  def list_pets
    "I have #{dogsowned.count} dog(s), and #{catsowned.count} cat(s)."
