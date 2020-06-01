@@ -19,4 +19,7 @@ class Owner
  def self.reset_all
    @@all.clear
  end
+ def cats 
+   Cat.all.collect {|kitty| kitty.owner == self}
+ end
 end
