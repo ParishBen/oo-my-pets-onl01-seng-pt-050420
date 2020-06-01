@@ -34,4 +34,10 @@ class Owner
    def walk_dogs
      self.dogs.collect {|dog| dog.mood = "happy"}
    end
+   def feed_cats
+     self.cats.collect {|cat| cat.mood = "happy"}
+ end
+ def sell_pets
+   
+ end
 end
