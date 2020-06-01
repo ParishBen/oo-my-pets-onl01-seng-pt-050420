@@ -45,7 +45,7 @@ class Owner
  end
  def sell_pets
    @dogsowned.each {|dog| dog.owner = nil}
-   @catsowned.each {|cat| cat.owner - nil}
+   @catsowned.each {|cat| cat.owner = nil}
  end
  #def sell_pets
  #   pets = self.dogs + self.cats
